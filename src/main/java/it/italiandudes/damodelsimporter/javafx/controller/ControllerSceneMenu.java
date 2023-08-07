@@ -239,7 +239,7 @@ public final class ControllerSceneMenu {
                                 newModelBuilder.append("      \"keywords\":[],\n");
                                 newModelBuilder.append("      \"categoryName\":\"").append(comboBoxCategoryName.getSelectionModel().getSelectedItem()).append("\",\n");
                                 newModelBuilder.append("      \"path\":\"").append(DAModelsImporter.Defs.CUSTOM_MODELS_DIRECTORY_NAME + "/").append(directoryNumber).append("/").append("model.").append(FileHandler.getFileExtension(modelFile)).append("\",\n");
-                                newModelBuilder.append("      \"template\":\"Token 1x1\",\n");
+                                newModelBuilder.append("      \"template\":\"Templates/Token 1x1\",\n");
                                 newModelBuilder.append("      \"scale\":").append(scale).append(",\n");
                                 newModelBuilder.append("      \"verticalOffset\":0.0,\n");
                                 newModelBuilder.append("      \"config\":null\n");
