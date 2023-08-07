@@ -1,0 +1,43 @@
+plugins {
+    id 'com.github.johnrengelman.shadow' version '7.1.2'
+    id 'java'
+}
+
+group = 'it.italiandudes'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    flatDir {
+        dirs 'lib'
+    }
+}
+
+dependencies {
+    compileOnly 'org.jetbrains:annotations:23.0.0'
+    implementation 'commons-codec:commons-codec:1.15'
+    implementation 'commons-io:commons-io:2.11.0'
+    implementation 'it.italiandudes:idl:1.0.5'
+    implementation 'com.googlecode.json-simple:json-simple:1.1.1'
+}
+
+shadowJar {
+    manifest {
+        attributes "Main-Class" : "it.italiandudes.daassetsimporter.DAAssetsImporter"
+    }
+    archiveFileName = getRootDir().getName()+"-"+archiveVersion.get()+".jar"
+}
+
+tasks.register('buildJar') {
+    dependsOn shadowJar
+    group = "Build"
+    description = "Build and assemble DAAssetsImporter"
+}
+
+tasks.register('runClient', Exec) {
+    dependsOn shadowJar
+    group = "Execution"
+    description = "Buind, assemble and run DAAssetsImporter"
+    standardInput = System.in
+    commandLine "java", "-jar", jar.archiveFile.get()
+}
