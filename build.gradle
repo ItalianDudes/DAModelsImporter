@@ -23,7 +23,7 @@ dependencies {
 
 shadowJar {
     manifest {
-        attributes "Main-Class" : "it.italiandudes.daassetsimporter.DAAssetsImporter"
+        attributes "Main-Class" : "it.italiandudes.damodelsimporter.DAModelsImporter"
     }
     archiveFileName = getRootDir().getName()+"-"+archiveVersion.get()+".jar"
 }
@@ -31,13 +31,13 @@ shadowJar {
 tasks.register('buildJar') {
     dependsOn shadowJar
     group = "Build"
-    description = "Build and assemble DAAssetsImporter"
+    description = "Build and assemble DAModelsImporter"
 }
 
 tasks.register('runClient', Exec) {
     dependsOn shadowJar
     group = "Execution"
-    description = "Buind, assemble and run DAAssetsImporter"
+    description = "Buind, assemble and run DAModelsImporter"
     standardInput = System.in
     commandLine "java", "-jar", jar.archiveFile.get()
 }

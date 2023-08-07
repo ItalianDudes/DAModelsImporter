@@ -1,6 +1,6 @@
-package it.italiandudes.daassetsimporter.javafx;
+package it.italiandudes.damodelsimporter.javafx;
 
-import it.italiandudes.daassetsimporter.DAAssetsImporter;
+import it.italiandudes.damodelsimporter.DAModelsImporter;
 import javafx.geometry.Rectangle2D;
 import javafx.scene.image.Image;
 import javafx.stage.Screen;
@@ -11,7 +11,7 @@ public final class JFXDefs {
     //App Info
     public static final class AppInfo {
         public static final String NAME = "DA Assets Importer";
-        public static final Image LOGO = new Image(DAAssetsImporter.Defs.Resources.get(Resource.Image.IMAGE_LOGO).toString());
+        public static final Image LOGO = new Image(DAModelsImporter.Defs.Resources.get(Resource.Image.IMAGE_LOGO).toString());
     }
 
     // System Info
@@ -28,6 +28,7 @@ public final class JFXDefs {
         public static final class FXML {
             private static final String FXML_DIR = "/fxml/";
             public static final String FXML_LOADING = FXML_DIR + "SceneLoading.fxml";
+            public static final String FXML_MENU = FXML_DIR + "SceneMenu.fxml";
         }
 
         //GIF Location

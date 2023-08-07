@@ -1,6 +1,6 @@
-package it.italiandudes.daassetsimporter.javafx.controller;
+package it.italiandudes.damodelsimporter.javafx.controller;
 
-import it.italiandudes.daassetsimporter.javafx.Client;
+import it.italiandudes.damodelsimporter.javafx.Client;
 import javafx.fxml.FXML;
 
 @SuppressWarnings("unused")

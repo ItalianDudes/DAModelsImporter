@@ -1,6 +1,6 @@
-package it.italiandudes.daassetsimporter.javafx.alert;
+package it.italiandudes.damodelsimporter.javafx.alert;
 
-import it.italiandudes.daassetsimporter.javafx.JFXDefs;
+import it.italiandudes.damodelsimporter.javafx.JFXDefs;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
 import javafx.stage.Stage;

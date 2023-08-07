@@ -1,6 +1,6 @@
-package it.italiandudes.daassetsimporter;
+package it.italiandudes.damodelsimporter;
 
-import it.italiandudes.daassetsimporter.javafx.Client;
+import it.italiandudes.damodelsimporter.javafx.Client;
 import it.italiandudes.idl.common.Logger;
 import org.jetbrains.annotations.NotNull;
 import org.json.simple.parser.JSONParser;
@@ -12,7 +12,7 @@ import java.net.URL;
 import java.util.Objects;
 
 @SuppressWarnings("unused")
-public final class DAAssetsImporter {
+public final class DAModelsImporter {
 
     // Attributes
     public static final JSONParser JSON_PARSER = new JSONParser();
@@ -39,17 +39,17 @@ public final class DAAssetsImporter {
     public static final class Defs {
 
         // Jar App Position
-        public static final String JAR_POSITION = new File(DAAssetsImporter.class.getProtectionDomain().getCodeSource().getLocation().getPath()).getAbsolutePath();
+        public static final String JAR_POSITION = new File(DAModelsImporter.class.getProtectionDomain().getCodeSource().getLocation().getPath()).getAbsolutePath();
 
         // Resources Location
         public static final class Resources {
             //Resource Getter
             public static URL get(@NotNull final String resourceConst) {
-                return Objects.requireNonNull(DAAssetsImporter.class.getResource(resourceConst));
+                return Objects.requireNonNull(DAModelsImporter.class.getResource(resourceConst));
             }
 
             public static InputStream getAsStream(@NotNull final String resourceConst) {
-                return Objects.requireNonNull(DAAssetsImporter.class.getResourceAsStream(resourceConst));
+                return Objects.requireNonNull(DAModelsImporter.class.getResourceAsStream(resourceConst));
             }
         }
 

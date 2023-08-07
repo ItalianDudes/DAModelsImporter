@@ -1,7 +1,7 @@
-package it.italiandudes.daassetsimporter.javafx;
+package it.italiandudes.damodelsimporter.javafx;
 
+import it.italiandudes.damodelsimporter.javafx.scene.SceneMenu;
 import it.italiandudes.idl.common.Logger;
-import it.italiandudes.ipikaros.javafx.scene.SceneMenu;
 import javafx.application.Application;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
