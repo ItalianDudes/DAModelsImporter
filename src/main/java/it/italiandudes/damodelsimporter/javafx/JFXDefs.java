@@ -10,7 +10,7 @@ public final class JFXDefs {
 
     //App Info
     public static final class AppInfo {
-        public static final String NAME = "DA Assets Importer";
+        public static final String NAME = "DA Models Importer";
         public static final Image LOGO = new Image(DAModelsImporter.Defs.Resources.get(Resource.Image.IMAGE_LOGO).toString());
     }
 

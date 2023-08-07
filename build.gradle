@@ -4,7 +4,7 @@ plugins {
 }
 
 group = 'it.italiandudes'
-version = '1.0-SNAPSHOT'
+version = '1.0R'
 
 repositories {
     mavenCentral()
@@ -15,7 +15,6 @@ repositories {
 
 dependencies {
     compileOnly 'org.jetbrains:annotations:23.0.0'
-    implementation 'commons-codec:commons-codec:1.15'
     implementation 'commons-io:commons-io:2.11.0'
     implementation 'it.italiandudes:idl:1.0.5'
     implementation 'com.googlecode.json-simple:json-simple:1.1.1'

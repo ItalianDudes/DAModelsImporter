@@ -3,7 +3,6 @@ package it.italiandudes.damodelsimporter;
 import it.italiandudes.damodelsimporter.javafx.Client;
 import it.italiandudes.idl.common.Logger;
 import org.jetbrains.annotations.NotNull;
-import org.json.simple.parser.JSONParser;
 
 import java.io.File;
 import java.io.IOException;
@@ -13,9 +12,6 @@ import java.util.Objects;
 
 @SuppressWarnings("unused")
 public final class DAModelsImporter {
-
-    // Attributes
-    public static final JSONParser JSON_PARSER = new JSONParser();
 
     // Main Method
     public static void main(String[] args) {
@@ -52,6 +48,17 @@ public final class DAModelsImporter {
                 return Objects.requireNonNull(DAModelsImporter.class.getResourceAsStream(resourceConst));
             }
         }
+
+        // Model Extensions
+        public static final String[] MODEL_EXTENSIONS = new String[]{
+                "glb"
+        };
+
+        // Custom Models Directory
+        public static final String CUSTOM_MODELS_DIRECTORY_NAME = "Custom_Models";
+
+        // JSON Models File
+        public static final String JSON_MODELS_FILE_NAME = "models.json";
 
         // JSON
         public static final class JSON {
