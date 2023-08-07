@@ -8,8 +8,7 @@ public enum CategoryName {
     PLACE_OBJECTS("Place Objects"),
     CHARACTERS("Characters"),
     MONSTERS("Monsters"),
-    NPCS("NPCs"),
-
+    NPCS("NPCs")
     ;
 
     // Attributes

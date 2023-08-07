@@ -233,7 +233,7 @@ public final class ControllerSceneMenu {
                         String buffer;
                         while (fileReader.hasNext()) {
                             buffer = fileReader.nextLine();
-                            if (buffer.equals("]")) {
+                            if (buffer.replace(" ", "").equals("]")) {
                                 newModelBuilder.append("    {\n");
                                 newModelBuilder.append("      \"name\":\"").append(modelName).append("\",\n");
                                 newModelBuilder.append("      \"keywords\":[],\n");
@@ -254,6 +254,7 @@ public final class ControllerSceneMenu {
                         try {
                             FileWriter fileWriter = new FileWriter(modelsDirectory.getAbsolutePath() + File.separator + DAModelsImporter.Defs.JSON_MODELS_FILE_NAME);
                             fileWriter.append(modelsFileBuilder.toString());
+                            fileWriter.flush();
                             fileWriter.close();
                         } catch (IOException e) {
                             Logger.log(e);
